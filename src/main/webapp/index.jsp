@@ -40,5 +40,14 @@
     map.put("postId", "201");
   %>
   <%= com.example.utils.Utility.interpolate("https://api.example.com/:userId/posts/:postId", map) %>
+
+  <!-- import -->
+  <%@ page import="java.util.*, com.example.utils.Utility" %>
+  <%
+    Map<String, String> mapII = new HashMap<String, String>();
+    mapII.put("userId", "101");
+    mapII.put("postId", "101");
+  %>
+  <%= Utility.interpolate("https://api.example.com/:userId/posts/:postId", mapII) %>
 </body>
 </html>

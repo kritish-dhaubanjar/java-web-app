@@ -1,6 +1,6 @@
 # java-web-app
 
-### ![1. New Project Setup using maven](https://maven.apache.org/archetype/maven-archetype-plugin/usage.html)
+### [1. New Project Setup using maven](https://maven.apache.org/archetype/maven-archetype-plugin/usage.html)
 ```
 mvn archetype:generate
 ```
@@ -11,7 +11,7 @@ mvn archetype:generate
 - version: 1.0-SNAPSHOT
 - packaging: war
 
-### ![2. Embedded Web Server jetty://](https://www.eclipse.org/jetty/documentation/jetty-9/index.html#jetty-maven-plugin)
+### [2. Embedded Web Server jetty://](https://www.eclipse.org/jetty/documentation/jetty-9/index.html#jetty-maven-plugin)
 ```
 <plugin>
   <groupId>org.eclipse.jetty</groupId>
@@ -29,7 +29,7 @@ mvn archetype:generate
 mvn jetty:run
 ```
 
-### ![3. Introduction to the Standard Directory Layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
+### [3. Introduction to the Standard Directory Layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
 Having a common directory layout allows users familiar with one Maven project to immediately feel at home in another Maven project. The advantages are analogous to adopting a site-wide look-and-feel.
 
 The next section documents the directory layout expected by Maven and the directory layout created by Maven. Try to conform to this structure as much as possible. However, if you can't, these settings can be overridden via the project descriptor.

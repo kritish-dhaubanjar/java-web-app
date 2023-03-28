@@ -1,3 +1,4 @@
+<%@ page isELIgnored="false" %>
 <html>
 <body>
   <!-- JSP Expression -->
@@ -57,5 +58,32 @@
 
   <!-- JSP Partial -->
   <jsp:include page="partial.jsp"/>
+
+  <!-- form -->
+  Email: <%= request.getParameter("email") %>
+  Password: ${param.password}
+
+  <%
+    String [] languages = request.getParameterValues("language");
+
+    if(languages != null){
+      for(String language: languages){
+        out.println(language);
+      }
+    }
+  %>
+
+  <form method="POST" action="/">
+    <input type="text" name="email"/>
+    <input type="password" name="password">
+
+    <input type="checkbox" name="language" value="C"/>
+    <label>C</label>
+    <input type="checkbox" name="language" value="Java"/>
+    <label>Java</label>
+    <input type="checkbox" name="language" value="Javascript"/>
+    <label>Javascript</label>
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>

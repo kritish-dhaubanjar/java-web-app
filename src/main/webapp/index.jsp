@@ -55,5 +55,7 @@
   <%= request.getHeader("User-Agent") %>
   <%= request.getLocale() %>
 
+  <!-- JSP Partial -->
+  <jsp:include page="partial.jsp"/>
 </body>
 </html>

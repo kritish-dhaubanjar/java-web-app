@@ -49,5 +49,11 @@
     mapII.put("postId", "101");
   %>
   <%= Utility.interpolate("https://api.example.com/:userId/posts/:postId", mapII) %>
+  <br/>
+
+  <!-- JSP Built in objects -->
+  <%= request.getHeader("User-Agent") %>
+  <%= request.getLocale() %>
+
 </body>
 </html>

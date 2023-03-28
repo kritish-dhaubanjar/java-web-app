@@ -31,5 +31,14 @@
   <%
     }
   %>
+  </br>
+
+  <!-- JSP Java Class -->
+  <%
+    java.util.Map<String, String> map = new java.util.HashMap<String, String>();
+    map.put("userId", "102");
+    map.put("postId", "201");
+  %>
+  <%= com.example.utils.Utility.interpolate("https://api.example.com/:userId/posts/:postId", map) %>
 </body>
 </html>

@@ -61,3 +61,11 @@ Within artifact producing source directories (ie. `main` and `test`), there is o
 
 If there are other contributing sources to the artifact build, they would be under other subdirectories. For example `src/main/antlr` would contain Antlr grammar definition files.
 
+### 4. Built-In Sever Objects
+| Object | Description |
+|-|-|
+| request | Contains HTTP request headers & form data |
+| response | Provides HTTP support for sending response |
+| out | JspWriter for including content in HTML page |
+| session | Unique session for each user of the web application |
+| application | Shared data for all users of the web application |

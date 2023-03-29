@@ -4,4 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>jsp-session</servlet-name>
+    <jsp-file>/session.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jsp-session</servlet-name>
+    <url-pattern>/session</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -80,3 +80,14 @@ If there are other contributing sources to the artifact build, they would be und
 | getId(): String | Returns the session id |
 | invalidate(): void | Invalidates this session and unbinds any object assocaited with it |
 | setMaxInactiveInterval(long ms): void | Sets the idle time for a session to expire. The value is supplied in milliseconds. |
+
+### [6. JSTL](https://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/index.html)
+https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl/1.2
+
+| Tag Lib | Description |
+|-|-|
+| JSTL core | JSTL 1.1 core library |
+| JSTL fmt | JSTL 1.1 i18n-capable formatting library |
+| JSTL sql | JSTL 1.1 sql library |
+| JSTL XML | JSTL 1.1 XML library |
+| JSTL functions | JSTL 1.1 functions library |

@@ -16,6 +16,10 @@
     <servlet-name>jsp-i18n</servlet-name>
     <jsp-file>/i18n.jsp</jsp-file>
   </servlet>
+  <servlet>
+    <servlet-name>servlet</servlet-name>
+    <servlet-class>com.example.servlets.Servlet</servlet-class>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>jsp-session</servlet-name>
@@ -28,5 +32,9 @@
   <servlet-mapping>
     <servlet-name>jsp-i18n</servlet-name>
     <url-pattern>/i18n</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>servlet</servlet-name>
+    <url-pattern>/servlet</url-pattern>
   </servlet-mapping>
 </web-app>

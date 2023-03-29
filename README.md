@@ -82,12 +82,19 @@ If there are other contributing sources to the artifact build, they would be und
 | setMaxInactiveInterval(long ms): void | Sets the idle time for a session to expire. The value is supplied in milliseconds. |
 
 ### [6. JSTL](https://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/index.html)
-https://mvnrepository.com/artifact/javax.servlet/jstl
+##### javax.servlet.jsp.jstl-api-1.2.1.jar
+- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl-api/1.2
+- This contains the JSTL API interfaces and support classes. However a large number of the interfaces do not have implementation classes.
+
+##### javax.servlet.jsp.jstl-1.2.1.jar
+- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl/1.2
+- This contains an implementation of the JSTL API. This code implements all of the interface from the API above.
+
 
 | Tag Lib | Description |
 |-|-|
-| JSTL core | JSTL 1.1 core library |
-| JSTL fmt | JSTL 1.1 i18n-capable formatting library |
-| JSTL sql | JSTL 1.1 sql library |
-| JSTL XML | JSTL 1.1 XML library |
-| JSTL functions | JSTL 1.1 functions library |
+| JSTL core | JSTL core library |
+| JSTL fmt | JSTL i18n-capable formatting library |
+| JSTL sql | JSTL sql library |
+| JSTL XML | JSTL XML library |
+| JSTL functions | JSTL functions library |

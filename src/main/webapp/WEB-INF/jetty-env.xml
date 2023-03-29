@@ -1,0 +1,16 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+    <New id="web_student_tracker" class="org.eclipse.jetty.plus.jndi.Resource">
+        <Arg>jdbc/web_student_tracker</Arg>
+        <Arg>
+            <!-- <New class="com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource"> -->
+            <New class="com.mysql.cj.jdbc.MysqlDataSource">
+                <Set name="Url">jdbc:mysql://localhost/web_student_tracker?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull</Set>
+                <Set name="User">admin</Set>
+                <Set name="Password">admin</Set>
+            </New>
+        </Arg>
+    </New>
+</Configure>

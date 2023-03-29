@@ -8,8 +8,17 @@
     <servlet-name>jsp-session</servlet-name>
     <jsp-file>/session.jsp</jsp-file>
   </servlet>
+  <servlet>
+    <servlet-name>jsp-tags</servlet-name>
+    <jsp-file>/tags.jsp</jsp-file>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>jsp-session</servlet-name>
     <url-pattern>/session</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>jsp-tags</servlet-name>
+    <url-pattern>/tags</url-pattern>
   </servlet-mapping>
 </web-app>

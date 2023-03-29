@@ -66,6 +66,7 @@
         <plugin>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-maven-plugin</artifactId>
+          <version>11.0.14</version>
           <configuration>
             <scanIntervalSeconds>10</scanIntervalSeconds>
             <webApp>

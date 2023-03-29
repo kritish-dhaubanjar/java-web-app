@@ -36,3 +36,17 @@
     }
   %>
 </ul>
+
+<%
+  Cookie[] cookies = request.getCookies();
+
+  if(cookies != null){
+    for(Cookie _cookie: cookies){
+      out.println(_cookie.getName() + ":" + _cookie.getValue());
+    }
+  }
+
+  Cookie cookie = new Cookie("key", "value");
+  cookie.setMaxAge(60);
+  response.addCookie(cookie);
+%>

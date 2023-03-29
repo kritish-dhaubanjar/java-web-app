@@ -98,3 +98,75 @@ If there are other contributing sources to the artifact build, they would be und
 | JSTL sql | JSTL sql library |
 | JSTL XML | JSTL XML library |
 | JSTL functions | JSTL functions library |
+
+### 6. JDBC
+To add JDBC support to a Maven Webapp archetype, you can follow these steps: Open the pom.xml file of your Maven Webapp project. Add the following dependency to your pom.xml file to include JDBC driver in your project:
+
+```
+<dependency>
+  <groupId>com.oracle.jdbc</groupId>
+  <artifactId>ojdbc8</artifactId>
+  <version>18.3.0.0</version>
+</dependency>
+```
+
+Note: You may need to replace the groupId, artifactId, and version with the appropriate values for your JDBC driver.
+
+Add a context.xml file to your project’s META-INF folder. This file is used to configure the database connection.
+
+```
+<Context>
+  <Resource name="jdbc/MyDB" auth="Container" type="javax.sql.DataSource"
+             maxActive="100" maxIdle="30" maxWait="10000"
+             username="username" password="password" driverClassName="com.mysql.jdbc.Driver"
+             url="jdbc:mysql://localhost:3306/mydb"/>
+</Context>
+```
+
+Note: You may need to replace the name, username, password, driverClassName, and url with the appropriate values for your database. Update the web.xml file to include the resource reference for the database connection.
+
+```
+<resource-ref>
+  <description>My Connection</description>
+  <res-ref-name>jdbc/MyDB</res-ref-name>
+  <res-type>javax.sql.DataSource</res-type>
+  <res-auth>Container</res-auth>
+</resource-ref>
+```
+Note: Make sure the res-ref-name matches the name attribute in your context.xml file.
+
+With these steps, you have added JDBC support to your Maven Webapp archetype, and you should be able to connect to your database using JDBC in your project.
+
+In your Servlet code, use the @Resource annotation to inject the database resource into a DataSource object. Here is an example:
+
+java
+```
+@WebServlet("/my-servlet")
+public class MyServlet extends HttpServlet {
+ 
+  @Resource(name="jdbc/MyDB")
+  private DataSource dataSource;
+ 
+  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    Connection connection = null;
+    Statement statement = null;
+    try {
+      connection = dataSource.getConnection();
+      statement = connection.createStatement();
+      ResultSet resultSet = statement.executeQuery("SELECT * FROM mytable");
+      // process the resultSet
+    } catch (SQLException e) {
+      // handle exception
+    } finally {
+      try { statement.close(); } catch (Exception e) { }
+      try { connection.close(); } catch (Exception e) { }
+    }
+  }
+ 
+}
+```
+
+In the above example, the @Resource annotation is used to inject the database resource into the dataSource object. Then, a Connection object is obtained from the DataSource object, and a Statement object is created to execute a SQL query. Finally, the ResultSet object is processed, and the Connection and Statement objects are closed.
+
+Note: Make sure that the name attribute of the @Resource annotation matches the res-ref-name in the web.xml file. Also, make sure to handle exceptions properly in your code.
+

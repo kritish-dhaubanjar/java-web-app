@@ -24,6 +24,10 @@
       <param-value>servlet-param-value</param-value>
     </init-param>
   </servlet>
+  <servlet>
+    <servlet-name>dispatch</servlet-name>
+    <servlet-class>com.example.servlets.Dispatch</servlet-class>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>jsp-session</servlet-name>
@@ -40,6 +44,10 @@
   <servlet-mapping>
     <servlet-name>servlet</servlet-name>
     <url-pattern>/servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>dispatch</servlet-name>
+    <url-pattern>/dispatch</url-pattern>
   </servlet-mapping>
 
   <context-param>

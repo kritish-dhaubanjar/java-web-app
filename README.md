@@ -69,3 +69,14 @@ If there are other contributing sources to the artifact build, they would be und
 | out | JspWriter for including content in HTML page |
 | session | Unique session for each user of the web application |
 | application | Shared data for all users of the web application |
+
+
+### 5. JSP Session
+| Method | Description |
+|-|-|
+| getAttribute(String attribute): Object | Get attribute in a session. eg: (List<String>)session.getAttribute("attribute") |
+| setAttribute(String attribute, Object value): void | Set attribute in a session. |
+| isNew(): boolean | Returns true if the session is new |
+| getId(): String | Returns the session id |
+| invalidate(): void | Invalidates this session and unbinds any object assocaited with it |
+| setMaxInactiveInterval(long ms): void | Sets the idle time for a session to expire. The value is supplied in milliseconds. |

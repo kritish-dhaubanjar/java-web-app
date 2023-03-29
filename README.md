@@ -82,7 +82,7 @@ If there are other contributing sources to the artifact build, they would be und
 | setMaxInactiveInterval(long ms): void | Sets the idle time for a session to expire. The value is supplied in milliseconds. |
 
 ### [6. JSTL](https://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/index.html)
-https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl/1.2
+https://mvnrepository.com/artifact/javax.servlet/jstl
 
 | Tag Lib | Description |
 |-|-|

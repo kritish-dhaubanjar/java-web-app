@@ -5,7 +5,7 @@
 mvn archetype:generate
 ```
 
-- archeType: ![maven-archetype-webapp](https://maven.apache.org/archetypes/maven-archetype-webapp/)
+- archeType: [maven-archetype-webapp](https://maven.apache.org/archetypes/maven-archetype-webapp/)
 - groupId: com.example.java-web-app
 - artifactId: java-web-app
 - version: 1.0-SNAPSHOT
